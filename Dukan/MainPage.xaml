@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Dukan.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dukan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="_tbDesciption" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="300" Grid.RowSpan="2" Width="340">
+            ● конина (за исключением нижней части живота);<LineBreak />
+          
+● говядина (кроме реберной части и антрекота, т.к. в них много жира);<LineBreak />
+● телятина;<LineBreak />
+● субпродукты (печень, язык);<LineBreak />
+● птица (кроме уток и гусей, у которых жирное мясо). Есть мясо надо обязательно без кожи;<LineBreak />
+● крольчатина;<LineBreak />
+
+        </TextBlock>
+
+        <ComboBox x:Name="_cbPhase" Grid.Column="1" HorizontalAlignment="Left" Margin="0,63,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="_cbPhase_SelectionChanged">
+
+            <ComboBoxItem Content="Атака"  />
+            <ComboBoxItem Content="Чередование"/>
+            <ComboBoxItem Content="Стабилизация"/>
+            <ComboBoxItem Content="Закрепление"/>
+
+        </ComboBox>
+        <ScrollViewer Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="10,53,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100">
+            
+            
+        </ScrollViewer>
+
+
+
+    </Grid>
+</Page>
