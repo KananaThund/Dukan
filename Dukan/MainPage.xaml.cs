@@ -35,11 +35,28 @@ namespace Dukan
 
         private void _cbPhase_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // if (_cbPhase.IsEnabled)
-            // 
-            //_tbDesciption.Text = "Описание того, чего можно, а чего нельзя и воообщзелофыдвлождлфыаождлымосджчсляомдлячсомдлчясомждлоячсмдлочясджмлочсдмлочдлсомдлоыв";
+            string a = (_cbPhase.SelectedItem as ComboBoxItem).Content.ToString();
 
-
+            if (a == "Атака")
+                _tbDesciption.Text = "desc_txt1";
+            else
+            {
+                if (a == "Чередование")
+                    _tbDesciption.Text = "desc_txt2";
+                else
+                {
+                    if (a == "Стабилизация")
+                        _tbDesciption.Text = "desc_txt3";
+                    else
+                    {
+                        if (a == "Закрепление")
+                            _tbDesciption.Text = "desc_txt4";
+                    }
+                }
+            }
         }
+
+
     }
 }
+
